@@ -23,7 +23,7 @@ pod 'TKZoomSDK', :path => '/path/to/zoom-sdk-pods'
 
 ---
 ### License & Credits
-- **Author**: Tushar Kalsara (`tushar.kalsara.ext@nmims.edu`)
+- **Author**: Tushar Kalsara (`tusharrkdev@gmail.com`)
 - **GitHub**: [tusharrk/TKZoomSDK](https://github.com/tusharrk/TKZoomSDK)
 - **License**: MIT
 - Zoom Meeting SDK binaries copyright © Zoom Video Communications, Inc.

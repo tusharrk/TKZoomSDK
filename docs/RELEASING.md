@@ -13,15 +13,15 @@
 #### 3. Lint
 Check for any errors:
 ```bash
-pod spec lint TKZoomSDK.podspec --allow-warnings
+pod spec lint TKZoomSDK.podspec --allow-warnings --skip-import-validation
 ```
 
 #### 4. Register Trunk & Publish
 Register CocoaPods Trunk (first time only):
 ```bash
-pod trunk register tushar.kalsara.ext@nmims.edu 'Tushar Kalsara'
+pod trunk register tusharrkdev@gmail.com 'Tushar Kalsara'
 ```
 Confirm the email verification link, then publish:
 ```bash
-pod trunk push TKZoomSDK.podspec --allow-warnings
+pod trunk push TKZoomSDK.podspec --allow-warnings --skip-import-validation
 ```

@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                   CocoaPod wrapper for Zoom iOS Meeting SDK.
                    DESC
   s.homepage     = "https://github.com/tusharrk/TKZoomSDK"
-  s.author       = { "Tushar Kalsara" => "tushar.kalsara.ext@nmims.edu" }
+  s.author       = { "Tushar Kalsara" => "tusharrkdev@gmail.com" }
   s.platform     = :ios, "13.0"
 
   s.source       = { :http => 'https://github.com/tusharrk/TKZoomSDK/releases/download/v7.1.5.37603/zoom-sdk-ios-7.1.5.37603.zip' }
