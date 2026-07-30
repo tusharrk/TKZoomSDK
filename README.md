@@ -1,40 +1,29 @@
-### About
+# TKZoomSDK
 
-This is cocoapods for Zoom IOS SDK. 
+CocoaPod for Zoom iOS Meeting SDK version **7.1.5.37603** maintained by **Tushar Kalsara**.
 
-Pod includes several architectures:
-(Device and Emulator)
-Architectures may vary between pods.
-
-
-Pod includes sdk list:
-- MobileRTC.xcframework
-- MobileRTCScreenShare.xcframework
-- zoomcml.xcframework
-- MobileRTCResources.bundle
+### Pod Included Frameworks:
+- `MobileRTC.xcframework`
+- `MobileRTCScreenShare.xcframework`
+- `zoomcml.xcframework`
+- `MobileRTCResources.bundle`
 
 ### Usage
-Update your Podfile:
+
+Add to your `Podfile`:
+```ruby
+pod 'TKZoomSDK', '7.1.5.37603'
 ```
-pod 'ZoomSDK', '6.6.10.30439'
+
+### Local Testing Setup
+In your application's `Podfile`:
+```ruby
+pod 'TKZoomSDK', :path => '/path/to/zoom-sdk-pods'
 ```
 
-
-### Versions
-
-|    Version    | Notes                                  | 
-|:-------------:|:---------------------------------------|
-| 6.6.10.30439  | Minimum iOS is 15.0                       |
-| 6.5.10.27930  | Included zoomcml                       |
-| 6.4.10.25465  |                                        |
-| 6.2.11.20350  |                                        |
-| 6.1.0.16235   | Minimum iOS is 13.0                    |
-| 5.17.11.14222 | Minimum iOS is 12.0                    |
-| 5.17.10.13930 |                                        |
-
-[SDK minimum version policy](https://developers.zoom.us/docs/video-sdk/minimum-version/)
-
-### Note
- 
-If there is a new version available, just create issue. 
-We will try to add it within few days.
+---
+### License & Credits
+- **Author**: Tushar Kalsara (`tushar.kalsara.ext@nmims.edu`)
+- **GitHub**: [tusharrk/TKZoomSDK](https://github.com/tusharrk/TKZoomSDK)
+- **License**: MIT
+- Zoom Meeting SDK binaries copyright © Zoom Video Communications, Inc.

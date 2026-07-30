@@ -1,33 +1,37 @@
-
 Pod::Spec.new do |s|
-  s.name         = "ZoomSDK"
-  s.version      = "6.6.10.30439"
-  s.summary      = "Pod for zoom-sdk-ios"
+  s.name         = "TKZoomSDK"
+  s.version      = "7.1.5.37603"
+  s.summary      = "CocoaPod for Zoom iOS Meeting SDK"
   s.description  = <<-DESC
-                  Pod for zoom-sdk-ios.
+                  CocoaPod wrapper for Zoom iOS Meeting SDK.
                    DESC
-  s.homepage     = "https://github.com/zoom-us-community/zoom-sdk-pods"
-  s.author       = { "author" => "zvsx001@gmail.com" }
-  s.platform     = :ios, "15.0"
+  s.homepage     = "https://github.com/tusharrk/TKZoomSDK"
+  s.author       = { "Tushar Kalsara" => "tushar.kalsara.ext@nmims.edu" }
+  s.platform     = :ios, "13.0"
 
-  s.source = { :http => 'https://github.com/zoom-us-community/zoom-sdk-pods/releases/download/zoom-releases/zoom-sdk-ios-6.6.10.30439.zip' }
+  s.source       = { :http => 'https://github.com/tusharrk/TKZoomSDK/releases/download/v7.1.5.37603/zoom-sdk-ios-7.1.5.37603.zip' }
   s.requires_arc = true
 
-  s.vendored_frameworks =  "**/lib/MobileRTC.xcframework", "**/lib/MobileRTCScreenShare.xcframework", "**/lib/zoomcml.xcframework"
-  s.resource = '**/lib/MobileRTCResources.bundle'
+  s.vendored_frameworks = "**/lib/MobileRTC.xcframework", "**/lib/MobileRTCScreenShare.xcframework", "**/lib/zoomcml.xcframework"
+  s.resource            = '**/lib/MobileRTCResources.bundle'
 
-  s.libraries = "sqlite3", "z.1.2.5", "c++"
+  s.libraries      = "sqlite3", "z.1.2.5", "c++"
   s.weak_framework = 'VideoToolbox', 'CoreMedia', 'CoreVideo', 'CoreGraphics', 'ReplayKit'
 
-  # Note: Zoom SDK has only support for x86_64
+  # Zoom SDK 7.x only includes arm64 slices (device & arm64 simulator)
   s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 i386',
+    'ARCHS[sdk=iphonesimulator*]'          => 'arm64'
+  }
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 i386',
+    'ARCHS[sdk=iphonesimulator*]'          => 'arm64'
   }
 
-  s.license      =  { :type => 'MIT', :text => <<-LICENSE
+  s.license      = { :type => 'MIT', :text => <<-LICENSE
  MIT License
 
- Copyright (c) 2021 zvs001
+ Copyright (c) 2026 Tushar Kalsara
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -49,4 +53,3 @@ Pod::Spec.new do |s|
     LICENSE
   }
 end
-
